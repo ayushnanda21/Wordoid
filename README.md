@@ -3,11 +3,14 @@
 ## ABOUT
 Workoid is a blogging webapp made using Django framework that allows users to post their thoughts and knowledge with others.
 
+## TECH STACK
+DJango | Html | Python | Bootstrap | Jotforms | Stmp | Javascript
+
 ## Quick Start
 
 - Fork and Clone the repository using-
 ```
-git clone https://github.com/diyajaiswal11/Bloggitt.git
+git clone https://github.com/ayushnanda21/Wordoid.git
 ```
 - Create a Branch- 
 ```
