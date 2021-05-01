@@ -3,6 +3,11 @@ from django.contrib.auth.decorators import login_required
 from blog.models import Post, Comment
 from django.utils import timezone
 from blog.forms import PostForm, CommentForm
+from django.db import IntegrityError
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+
 
 from django.views.generic import (TemplateView,ListView,
                                   DetailView,CreateView,
@@ -97,3 +102,25 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)
+
+def signup(request):
+    if request.method == 'POST':
+        username = request.POST.get("username")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        password_c = request.POST.get("password-c")
+        if (password == password_c):
+            try:
+                user = User.objects.create_user(username, email, password);
+                user.save()
+                login(request, user)
+                messages.success(request, "Logged In Successfully")
+                return redirect("home")
+            except IntegrityError:
+                messages.info(request, "Try different Username")
+                return render(request, "signup.html")
+        messages.error(request, "Password doesn't match Confirm Password")
+    if request.user.is_authenticated:
+        return redirect('home')
+    return render(request, "blog/signup.html")
+
