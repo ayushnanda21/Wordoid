@@ -1,6 +1,6 @@
 # WORDOID 📝
 
-##ABOUT
+## ABOUT
 Workoid is a blogging webapp made using Django framework that allows users to post their thoughts and knowledge with others.
 
 ## Quick Start
@@ -72,6 +72,6 @@ git push --set-upstream origin <branch_name>
 <a href="https://github.com/ayushnanda21"></a>      
 
 ## Like This?? Star ⭐ this Repo.
-> Made with ❤️ by Diya Jaiswal
+> Made with ❤️ by Ayush Nanda
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
