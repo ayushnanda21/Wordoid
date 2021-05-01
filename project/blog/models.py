@@ -1,11 +1,11 @@
 from django.db import models
 from django.utils import timezone
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 # Create your models here.
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')
-    title =models.models.CharField(max_length=200)
+    author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
+    title =models.CharField(max_length=200)
     text = models.TextField()
     create_date = models.DateTimeField(default= timezone.now())
     published_date = models.DateTimeField(blank= True, null =True)
@@ -17,7 +17,7 @@ class Post(models.Model):
     def approve_comments(self):
         return self.comments.filter(approved_comment=True)
 
-    #where we want to go back to after task is done
+    #where we want to go back to after task is donee
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={"pk": self.pk})
     
@@ -26,9 +26,9 @@ class Post(models.Model):
         return self.title
     
 
-class Comments(models.Model):
-    post = models.ForeignKey('blog.Post', related_name= 'comments')
-    author = models.models.CharField(max_length=200)
+class Comment(models.Model):
+    post = models.ForeignKey('blog.Post', related_name= 'comments',on_delete=models.CASCADE)
+    author = models.CharField(max_length=200)
     text = models.TextField()
     create_date = models.DateTimeField(default= timezone.now())
     approved_comment = models.BooleanField(default=False)

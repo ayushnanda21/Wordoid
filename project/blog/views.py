@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from blog.models import Post,Comments
+from blog.models import Post,Comment
 from blog.forms import PostForm,CommentForm
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
