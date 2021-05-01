@@ -55,7 +55,8 @@ class DraftListView(LoginRequiredMixin,ListView):
 # -----------------VIEWS FOR COMMENTS------------------------------
 @login_required
 def post_publish(request,pk):
-    get_object_or_404(Post,pk=pk)
+    
+    post= get_object_or_404(Post,pk=pk)
     post.publish()
     return redirect('post_detail',pk=pk)
 
@@ -70,10 +71,10 @@ def add_comment_to_post(request,pk):
             comment.post = post
             comment.save()
             return redirect('post_detail',pk=post.pk)
-        else:
-            form = CommentForm()
+    else:
+        form = CommentForm()
 
-        return render(request,'blog/comment_form.html',{'form': form})
+    return render(request,'blog/comment_form.html',{'form': form})
 
 @login_required
 def comment_approve(request,pk):
