@@ -5,7 +5,7 @@ from django.utils import timezone
 from blog.forms import PostForm, CommentForm
 from django.db import IntegrityError
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from django.contrib import messages
 
 
@@ -123,4 +123,9 @@ def signup(request):
     if request.user.is_authenticated:
         return redirect('home')
     return render(request, "blog/signup.html")
+
+def logoutUser(request):
+    logout(request)
+    messages.info(request, "Logged out of Wordoid")
+    return redirect('login')
 
