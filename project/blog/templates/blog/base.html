@@ -20,11 +20,29 @@
         {# Fonts#}
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
 
+<style>
+.foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
 
+.containerx {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-
+</style>
 
 <body class='loader'>
+<div class="containerx" >
+
+
 
 
   <nav class="navbar navbar-default techfont custom-navbar">
@@ -81,8 +99,15 @@
 
 <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 
+<footer>
+    <div class="foot">
+    <p> Made by AYUSH NANDA </p>
+
+    </div>
+
+</footer>
 
 
+</div>
 </body>
-
 </html>
