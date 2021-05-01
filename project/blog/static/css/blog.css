@@ -1,3 +1,11 @@
+#bg{
+  background-size: 1800px 900px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  
+}
+
 .techfont{
     font-family: 'Russo One', sans-serif;
     font-size: 1.5em;

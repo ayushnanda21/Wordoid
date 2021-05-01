@@ -20,38 +20,24 @@
         {# Fonts#}
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
 
-<style>
-.foot {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
 
-.containerx {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
 
-</style>
-
-<body class='loader'>
+<body class="loader" id="bg" style="background-image: url('{% static "images/aboutblog8.jpg"%}')";>
 <div class="containerx" >
+
+
 
 
   <nav class="navbar navbar-default techfont custom-navbar">
     <div class="container">
 
 
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="padding:2px;">
         <li><a class='navbar-brand bigbrand' href="{% url 'post_list' %}">Workoid</a></li>
         <li><a href="{% url 'about'%}">About</a></li>
         <li><a href="https://www.github.com">Github</a></li>
         <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        <li><a href="{% url 'contactus'%}">Contact Us</a></li>
 
       </ul>
 
@@ -96,15 +82,10 @@
 {# SCRIPTS#}
 
 <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
-
-<footer>
-    <div class="foot">
-    <p> Made by AYUSH NANDA </p>
-
-    </div>
-
-</footer>
-
+<div class="container" style="text-align:center;">
+        <p><a href="#">Back to top</a></p>
+        <p>Wordoid ©2021, Made by Ayush Nanda · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</div>
 
 </div>
 </body>
