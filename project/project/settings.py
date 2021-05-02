@@ -24,9 +24,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'blog/templates/blog')
 SECRET_KEY = 'django-insecure-8#=h*meqfp6__$-u3m=u^h6a%^0uist1hgw0k$!ac8m3o^2hk+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1:8000', '']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
