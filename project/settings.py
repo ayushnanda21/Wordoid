@@ -24,7 +24,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'blog/templates/blog')
 SECRET_KEY = 'django-insecure-8#=h*meqfp6__$-u3m=u^h6a%^0uist1hgw0k$!ac8m3o^2hk+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -123,13 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT =os.path.join(BASE_DIR,'static')
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
 
 
 # Default primary key field type
@@ -138,3 +132,5 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
