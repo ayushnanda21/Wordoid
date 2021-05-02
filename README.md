@@ -32,7 +32,7 @@ python3 -m pip install -r requirements.txt
 
 - Headover to Project Directory- 
 ```
-cd bloggitt
+cd Wordoid
 ```
 - Make migrations using-
 ```
