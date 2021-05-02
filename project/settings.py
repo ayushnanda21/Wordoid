@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8#=h*meqfp6__$-u3m=u^h6a%^0uist1hgw0k$!ac8m3o^2hk+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', 'wordiod.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,6 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT =os.path.join(BASE_DIR,'static')
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 # Default primary key field type
