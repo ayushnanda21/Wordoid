@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+{% load static%}
+{% static "img" as baseUrl %}
+
+{% block content %}
+<div class="container my-4">
+<h1 style="text-align: center" style="font-weight:bold ">ABOUT US</h1>
+<img width="600" height="400" src="{% static 'images/aboutblog1.jpg' %}" alt="My Image" class="responsive" style="display:block; margin:auto;">
+<p style="font-size: 2.5ch;">A blogging website, meant to be used to share blogs related to anything.
+
+A superuser can upload blog and can attach certain related tags to each blog.
+Registered can view the list of blog, their author and times of creation.
+Any authorized user can read a blog, comment on the blog or reply on any comment.
+Each blog has an integrated discussion board automatically linked to it, for any comments.<br><br>
+
+
+<h1 style="text-align: center" style="font-weight:bold ">Developer</h1>
+<br>
+<div class="row featurette d-flex justify-content-center allign-items-center">
+            <div class="col-md-7 order-md-1 bgtext">
+                <h2 class="featurette-heading">Ayush Nanda <span class="text-muted"></span></h2>
+                <p class="style="font-size: 2.5ch;">Email- ayushnanda1980@gmail.com <br>
+                    Github- ayushnanda21 <br>
+                    Linkedln- https://www.linkedin.com/in/ayush-nanda-8997b1165/ </p>
+            </div>
+            <div class="col-md-5 order-md-2">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200"
+                    height="200" src="{% static 'images/ayush.jpg' %}">
+                <title>Ayush Nanda</title>
+            </div>
+</div>
+
+<div class="container" style="text-align:center;">
+        <p><a href="#">Back to top</a></p>
+        <p>Wordoid ©2021, Made by Ayush Nanda · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+{% endblock content %}
+
